@@ -3,7 +3,7 @@ $(() => {
 })
 
 function getData() {
-  $.get('http://localhost:3000/post', (data) => {
+  $.get('https://bajingan.herokuapp.com/post', (data) => {
     addData(data)
   })
 }
@@ -15,8 +15,8 @@ function addData(data) {
   else {
     var i = 1;
     data.forEach((element) => {
-      var urlEdit = 'http://localhost:3000/edit/'+element._id;
-      var urlDelete = 'http://localhost:3000/delete/'+element._id;
+      var urlEdit = 'https://bajingan.herokuapp.com/edit/'+element._id;
+      var urlDelete = 'https://bajingan.herokuapp.com/delete/'+element._id;
       $('tbody').append(`<tr><td>${i}</td><td>${element.title}</td><td>${element.postAt}</td><td>${element.desc}</td><td><a href='${urlEdit}' class='btn btn-success'>Edit</a> &nbsp<a href='${urlDelete}' class='btn btn-danger'>Delete</a></td><tr>`)
       i++;
     })
