@@ -18,14 +18,14 @@
       <div class="row">
         <div class="col-sm-8">
           <hr>
-          <form>
+          <form method="post" action="https://bajingan.herokuapp.com/post">
               <input type="text" placeholder="Title" name="title" placeholder="Title" class="form-control">
               <div id="titlestatus"></div>
             <br>
               <textarea name="desc" placeholder="DESC" class="form-control"></textarea>
               <div id="descstatus"></div>
             <br>
-            <button id="tombol" class="btn btn-success">Send</button>
+            <button id="tombol" type="submit" class="btn btn-success">Send</button>
           </form>
         </div>
       </div>
