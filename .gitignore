@@ -1,2 +1,4 @@
 node_modules
 api/models/connection.js
+template/testDelete.js
+template/test.html
