@@ -17,7 +17,25 @@ function addData(data) {
     data.forEach((element) => {
       var urlEdit = 'https://bajingan.herokuapp.com/edit/'+element._id;
       var urlDelete = 'https://bajingan.herokuapp.com/post/'+element._id;
-      $('tbody').append(`<tr><td>${i}</td><td>${element.title}</td><td>${element.postAt}</td><td>${element.desc}</td><td><a href='${urlEdit}' class='btn btn-success'>Edit</a> &nbsp<a onClick="hapus(urlDelete)" class='btn btn-danger'>Delete</a></td><tr>`)
+      $('tbody').append(`
+              <tr>
+                <td>
+                  ${i}
+                </td>
+                <td>
+                  ${element.title}
+                </td>
+                <td>
+                  ${element.postAt}
+                </td>
+                <td>
+                  ${element.desc}
+                </td>
+                <td>
+                  <a href='${urlEdit}' class='btn btn-success'>Edit</a> &nbsp
+                  <a onClick='hapus(${urlDelete})' class='btn btn-danger'>Delete</a>
+                </td>
+              <tr>`)
       i++;
     })
   }
